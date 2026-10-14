@@ -1,0 +1,8 @@
+cuneiscribe==0.2.0
+transformers
+torch
+sentencepiece
+protobuf
+pandas
+pillow
+numpy

@@ -1,0 +1,12 @@
+# large or local-only
+data/raw/*
+!data/raw/.gitkeep
+models/*
+!models/.gitkeep
+*.zip
+# python / mac
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store

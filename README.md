@@ -80,3 +80,7 @@ images/       artworks, diagrams, process pictures
 - **Matching:** after Xu, Zhang and Wong, *Structure-based ASCII Art*, SIGGRAPH 2010.
 - **Source photograph:** *Standing male worshipper*, Tell Asmar, c. 2900–2600 BC. The Metropolitan Museum of Art, 40.156, Fletcher Fund 1940; public-domain image.
 - **Fonts:** [Noto Sans Cuneiform](https://fonts.google.com/noto/specimen/Noto+Sans+Cuneiform) and [Turret Road](https://fonts.google.com/specimen/Turret+Road), both SIL Open Font License.
+
+## Licence
+
+Code (generator, extension, research scripts): [MIT](LICENSE). Writing and images: [CC BY-NC 4.0](LICENSE-CONTENT), share with credit, not for commercial use. Fonts: SIL Open Font License. The complaint lines are from a US government archive.

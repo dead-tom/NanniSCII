@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cuneiform Drift</title>
+<style>
+/* Layout: a table of contents. A numeral column on the left, grey gradient bars with italic
+   section labels, bold blue titles with spaced mono subtitles beneath. Single light look on purpose. */
+@font-face { font-family: "Turret Road"; src: url(fonts/TurretRoad-200.woff2) format("woff2"); font-weight: 200; }
+:root {
+  --ink: #2f4cff;            /* screen blue */
+  --ink-soft: #5a72ff;
+  --text: #1a1a1a;
+  --bar-hi: #fbfbfb;
+  --bar-lo: #d2d2d2;
+  --gutter-hi: #f3f3f3;
+  --gutter-lo: #dcdcdc;
+  --rule: #b9b9b9;
+  --f-display: "Turret Road", "Eurostile", "Bank Gothic", sans-serif;
+  --f-sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --f-mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; width: 330px; background: #e9e9e9; color: var(--text); font: 12px/1.45 var(--f-sans); }
+
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 9px 12px 8px;
+  background: linear-gradient(#ffffff, #d6d6d6);
+  border-bottom: 1px solid var(--rule);
+}
+.top h1 { margin: 0; font: 200 21px/1 var(--f-display); letter-spacing: .14em; text-transform: uppercase; color: #111; white-space: nowrap; }
+.top .state { display: block; margin-top: 4px; font: 10px/1.2 var(--f-mono); letter-spacing: .12em; color: var(--ink); }
+
+/* on/off: a small bevelled slot */
+.switch { position: relative; width: 42px; height: 20px; flex: none; }
+.switch input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; z-index: 1; }
+.slot { position: absolute; inset: 0; border: 1px solid #9c9c9c; background: linear-gradient(#cfcfcf, #f2f2f2); box-shadow: inset 0 1px 2px rgba(0,0,0,.18); }
+.slot::after { content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 14px; background: linear-gradient(#ffffff, #c9c9c9); border: 1px solid #9c9c9c; transition: transform .18s; }
+.switch input:checked + .slot { background: linear-gradient(#2a44f0, #5b74ff); border-color: #2236c8; }
+.switch input:checked + .slot::after { transform: translateX(20px); }
+.switch input:focus-visible + .slot { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+main { display: block; transition: opacity .2s; }
+.sec { display: grid; grid-template-columns: 34px 1fr; border-bottom: 1px solid var(--rule); }
+.num { background: linear-gradient(90deg, var(--gutter-hi), var(--gutter-lo)); color: var(--ink); font: 12px/1 var(--f-sans); display: flex; align-items: center; justify-content: center; border-right: 1px solid #cfcfcf; }
+.body { min-width: 0; }
+.label { margin: 0; padding: 5px 0; text-align: center; font: italic 14px/1.2 var(--f-sans); letter-spacing: .06em; color: #111; background: linear-gradient(var(--bar-hi), var(--bar-lo)); border-bottom: 1px solid #c4c4c4; }
+.rows { padding: 8px 12px 10px; background: linear-gradient(#f4f4f4, #dedede); display: grid; gap: 9px; }
+
+.title { display: block; font: 700 13px/1.2 var(--f-sans); color: var(--ink); }
+.sub { display: block; margin-top: 2px; font: 10px/1.3 var(--f-mono); letter-spacing: .14em; color: var(--ink-soft); }
+
+/* presence */
+.pres { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.pres output { font: 10px/1 var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink); }
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 16px; margin: 4px 0 0; background: transparent; cursor: pointer; }
+input[type=range]::-webkit-slider-runnable-track { height: 6px; border: 1px solid #9c9c9c; background: linear-gradient(#c8c8c8, #f4f4f4); box-shadow: inset 0 1px 2px rgba(0,0,0,.15); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 16px; margin-top: -6px; border: 1px solid #2236c8; background: linear-gradient(#6a82ff, #2a44f0); }
+input[type=range]:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.ends { display: flex; justify-content: space-between; font: 9.5px/1 var(--f-mono); letter-spacing: .14em; color: #777; margin-top: 2px; }
+
+/* effects */
+.opt { display: grid; grid-template-columns: 16px 1fr; gap: 8px; align-items: start; cursor: pointer; }
+.opt input { -webkit-appearance: none; appearance: none; width: 13px; height: 13px; margin: 1px 0 0; border: 1px solid #8f8f8f; background: linear-gradient(#ffffff, #d3d3d3); display: grid; place-items: center; cursor: pointer; }
+.opt input:checked { background: linear-gradient(#6a82ff, #2a44f0); border-color: #2236c8; }
+.opt input:checked::after { content: ""; width: 5px; height: 5px; background: #fff; }
+.opt input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+/* this site */
+.host { font: 11px/1.3 var(--f-mono); letter-spacing: .06em; color: #333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.btns { display: flex; gap: 8px; flex-wrap: wrap; }
+button {
+  font: 700 11.5px/1 var(--f-sans); color: var(--ink); padding: 6px 11px; cursor: pointer;
+  border: 1px solid #9c9c9c; background: linear-gradient(#ffffff, #d4d4d4);
+}
+button:hover { background: linear-gradient(#ffffff, #c4c8e8); border-color: #6f7fe0; }
+button:active { background: linear-gradient(#d4d4d4, #ffffff); }
+button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+#showBtn { color: #fff; border-color: #2236c8; background: linear-gradient(#6a82ff, #2a44f0); }
+#showBtn:hover { background: linear-gradient(#7d93ff, #3550ff); }
+#showMsg { font: 10.5px/1.4 var(--f-sans); color: var(--ink); min-height: 0; }
+#showMsg:empty { display: none; }
+
+.blurb { margin: 0; font: 11.5px/1.45 var(--f-sans); color: var(--ink); }
+footer { padding: 6px 12px 8px; background: linear-gradient(#f2f2f2, #d9d9d9); font: 9.5px/1.3 var(--f-mono); letter-spacing: .12em; color: #555; }
+kbd { font: inherit; color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="top">
+  <div>
+    <h1>Cuneiform Drift</h1>
+    <span class="state" id="state">On for every page</span>
+  </div>
+  <label class="switch" title="Turn on or off everywhere"><input type="checkbox" id="enabled" aria-label="Cuneiform Drift on or off"><span class="slot"></span></label>
+</div>
+
+<main>
+  <section class="sec about">
+    <div class="num" aria-hidden="true"></div>
+    <div class="body">
+      <p class="label">Screen Decay Trinket</p>
+      <div class="rows">
+        <div>
+          <span class="title">Browser Extension Screen Decay</span>
+          <span class="sub" style="letter-spacing:.07em">Particle Overlay &gt; Cuneiform Symbol Melt</span>
+        </div>
+        <p class="blurb">A digital mnemonic, subtly transforming text into cuneiform particle decay. It's an ergonomic trinket from the past, gently reminding us to stay aware of our passive interchange with online interaction and the living digital archive.</p>
+      </div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="num">i</div>
+    <div class="body">
+      <p class="label">Presence</p>
+      <div class="rows">
+        <div>
+          <div class="pres"><label class="title" for="intensity">How often it happens</label><output id="intOut">Quiet</output></div>
+          <span class="sub">Every 18 sec &gt; Every ½ sec</span>
+          <input type="range" id="intensity" min="0.05" max="1" step="0.05">
+          <div class="ends"><span>WHISPER</span><span>LIVELY</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="num">ii</div>
+    <div class="body">
+      <p class="label">Effects</p>
+      <div class="rows">
+        <label class="opt"><input type="checkbox" id="melt"><span><span class="title">Text Melt</span><span class="sub">Text &gt; Molten Sign &gt; Heal</span></span></label>
+        <label class="opt"><input type="checkbox" id="words"><span><span class="title">Word Shed</span><span class="sub">Word &gt; Clay Wedges</span></span></label>
+        <label class="opt"><input type="checkbox" id="cues"><span><span class="title">Motion Cues</span><span class="sub">Scroll &gt; Edge Marks</span></span></label>
+        <label class="opt"><input type="checkbox" id="blooms"><span><span class="title">Margin Signs</span><span class="sub">Seed &gt; Sign &gt; Crumble</span></span></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="num">iii</div>
+    <div class="body">
+      <p class="label">This Site</p>
+      <div class="rows">
+        <span class="host" id="host">This site</span>
+        <div class="btns"><button id="showBtn" type="button">Show me now</button><button id="siteBtn" type="button">Pause here</button></div>
+        <span id="showMsg" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>K</kbd> &nbsp;turns it on or off</footer>
+<script src="settings.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

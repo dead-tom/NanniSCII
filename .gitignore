@@ -1,12 +1,14 @@
-# large or local-only
-data/raw/*
-!data/raw/.gitkeep
-models/*
-!models/.gitkeep
-*.zip
-# python / mac
-__pycache__/
-.ipynb_checkpoints/
+# The raw complaint archive stays on your computer: real people's words.
+data/raw/
+
+# Renders made locally (finished pieces are copied to images/artworks/)
+outputs/
+
+# Python, Mac, editors
 .venv/
 venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
 .DS_Store
+.vscode/

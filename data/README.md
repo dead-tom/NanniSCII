@@ -8,6 +8,8 @@ Since 14 September 2026 the narratives are no longer in the public database; the
 
 ## What's here
 
+> **Coming next:** the first full run of the translation step. Until then, the test translations are in [`research/results/step2b_results.csv`](../research/results/step2b_results.csv).
+
 | File | What it is |
 |---|---|
 | `translations.csv` | the lines used, one per complaint, with their full translation log |

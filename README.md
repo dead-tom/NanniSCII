@@ -8,6 +8,8 @@
 
 <img src="images/artworks/worshipper_test-signs.png" width="440" alt="A standing Sumerian worshipper statue redrawn entirely in cuneiform signs">
 
+<sub>First render, drawn with the signs of the four test translations. The full run follows.</sub>
+
 </div>
 
 Around 1750 BC, a man called Nanni pressed a complaint into clay. The copper he'd been sold was poor quality, his messenger had been sent away empty-handed, and he was not going to stand for it. His tablet, now in the British Museum, is often called the oldest customer complaint in the world.
@@ -59,7 +61,7 @@ pip install -r requirements.txt
 python3 generator/nanniscii_render.py "generator/images/Standing_male_worshiper_high_contrast.jpg"
 ```
 
-This draws the worshipper with the translated lines in `data/translations.csv`. Swap in your own photo; to translate new complaints, see [the generator](generator/).
+This draws the worshipper with the translated lines in `data/translations.csv` (until the full run is in, add `--text-csv research/results/step2b_results.csv`). Swap in your own photo; to translate new complaints, see [the generator](generator/).
 
 ## What's in here
 

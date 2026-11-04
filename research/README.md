@@ -85,7 +85,9 @@ The renderer went through three versions.
 
 `generator/translate.ipynb` draws complaints at random with a fixed seed and takes one line from each: 6–35 words, at most one redaction, no greetings. Each line is translated, converted and logged with its back-translation, sign coverage and CuneiScribe's confidence verdict. Low-confidence lines are kept and marked; a line that sends the model into a loop is replaced by another complaint.
 
-Because patch matching uses the *set* of distinct signs, not one sign per cell, the lines become the image's alphabet: 40 lines give it far more variety than the 34 signs of the four test lines.
+Because patch matching uses the *set* of distinct signs, not one sign per cell, the lines become the image's alphabet. The run on 4 November 2026 translated 40 lines into 955 signs, **109 of them different** (the four test lines had 34); the worshipper at 90 signs across uses 12,800 of them. [The lines](../data/reference.md).
+
+What survived translation is the argument in miniature. An overdraft fee became *"my silver is stolen, and my head is cut off"*; a trip to buy petrol became *"I have come to the bed of my chariot"*; BofA became a man called Bafâ, performing an extispicy on your property. Many lines collapse into repetition (*"in perpetuity, in perpetuity"*, *"to Nusku, to Nusku, to Nusku"*), the model's own exasperation.
 
 ---
 

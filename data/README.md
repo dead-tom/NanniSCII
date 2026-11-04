@@ -8,7 +8,6 @@ Since 14 September 2026 the narratives are no longer in the public database; the
 
 ## What's here
 
-> **Coming next:** the first full run of the translation step. Until then, the test translations are in [`research/results/step2b_results.csv`](../research/results/step2b_results.csv).
 
 | File | What it is |
 |---|---|
@@ -16,6 +15,14 @@ Since 14 September 2026 the narratives are no longer in the public database; the
 | `reference.md` | the same lines in English, as a readable list |
 
 **What's not here:** the raw archive and the cleaned sample (`data/raw/`) stay on the computer they were made on. Even anonymised, they are people's own words in bulk. Only the single lines used in the work are published, each with its complaint ID so it can be traced in the archive.
+
+## This run
+
+40 complaints (one line each, `SEED = 1`) from a cleaned pool drawn from Export 2, received May 2018 – March 2021, across seven product categories. Together the lines give **955 signs, 109 of them different**: the image's alphabet. Four lines carry a redaction break.
+
+25 lines passed CuneiScribe's validator. For the other 15 the validator crashed on characters it didn't expect, such as `(m)` or `(d)` (the scholarly markers for a personal name or a god), so they are kept and marked `low_confidence`, as decided. Median sign coverage is 96.6%.
+
+**[Read all forty lines →](reference.md)**
 
 ## From archive to lines
 

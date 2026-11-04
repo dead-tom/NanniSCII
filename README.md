@@ -6,9 +6,9 @@
 
 *Tessa Edwards · 2026*
 
-<img src="images/artworks/worshipper_test-signs.png" width="440" alt="A standing Sumerian worshipper statue redrawn entirely in cuneiform signs">
+<img src="images/artworks/worshipper.png" width="440" alt="A standing Sumerian worshipper statue redrawn entirely in cuneiform signs">
 
-<sub>First render, drawn with the signs of the four test translations. The full run follows.</sub>
+<sub>12,800 signs, 109 different ones, from 40 complaints translated into Akkadian. <a href="images/artworks/worshipper.pdf">Full-size vector PDF</a> · <a href="images/artworks/worshipper_detail.png">close-up</a></sub>
 
 </div>
 
@@ -34,10 +34,12 @@ Every XXXX redaction survives as a break in the clay. Each line keeps a log of i
 
 | They wrote | The machine read back |
 |---|---|
-| They charged me an overdraft fee even though I had money in my account. | As soon as they have brought the silver into my possession, they shall return the money tenfold to its owners. |
-| Why am I being treated with such contempt after paying on time for years? | Why, for years, against me, against me, for years, I, I, I, |
+| Today, my checking is negative, my savings is empty, and I was charged an overdraft fee. | On this day, I am ill, my silver is stolen, and my head is cut off. |
+| On XX/XX/XXXX I went to get gas for my car. | I have come to the bed of my chariot. |
+| I told them I don't have the full balance.. | I said to them: "There is nothing." |
+| BofA has, in offense to the MOVE YOUR MONEY movement, done this to countless customers and should pay heavy penalties. | Bafâ has performed an extispicy on the possessions of your property without the consent of the king, and he should set out on a large campaign against them. |
 
-*From the translation tests, on lines written in the CFPB style. The lines in the finished work are listed in [the data](data/).*
+*Four of the forty lines in the finished work. All of them are in [the data](data/reference.md).*
 
 More in [the generator](generator/), [the data](data/) and [the research notes](research/).
 
@@ -61,7 +63,7 @@ pip install -r requirements.txt
 python3 generator/nanniscii_render.py "generator/images/Standing_male_worshiper_high_contrast.jpg"
 ```
 
-This draws the worshipper with the translated lines in `data/translations.csv` (until the full run is in, add `--text-csv research/results/step2b_results.csv`). Swap in your own photo; to translate new complaints, see [the generator](generator/).
+This draws the worshipper with the translated lines in `data/translations.csv`. Swap in your own photo; to translate new complaints, see [the generator](generator/).
 
 ## What's in here
 

@@ -33,34 +33,23 @@ The third is a digital mnemonic; a Akkadian cuneiform particle decay overlay tha
 
 ---
 
-## How it works
+## Project Contents
 
-![The NanniSCII pipeline](images/diagrams/pipeline.svg)
+```
+essay/        the essay, the artist statement, the designed PDF
+generator/    the scripts and the Colab notebook, from archive to image
+extension/    Cuneiform Drift, the browser extension
+data/         the lines used, with their translations
+research/     the process: tests, results, decisions
+images/       artworks, diagrams, process pictures
+```
+---
 
-Every XXXX redaction survives as a break in the clay. Each line keeps a log of its Akkadian, its signs, and a back-translation.
+## NanniSCII [the generator](generator/)
 
-| They wrote | The time machine translation |
-|---|---|
-| Today, my checking is negative, my savings is empty, and I was charged an overdraft fee. | On this day, I am ill, my silver is stolen, and my head is cut off. |
-| On XX/XX/XXXX I went to get gas for my car. | I have come to the bed of my chariot. |
-| I told them I don't have the full balance.. | I said to them: "There is nothing." |
-| BofA has, in offense to the MOVE YOUR MONEY movement, done this to countless customers and should pay heavy penalties. | Bafâ has performed an extispicy on the possessions of your property without the consent of the king, and he should set out on a large campaign against them. |
+# Quick start
 
-*Four of the forty lines in the finished work. All of them are in [the data](data/reference.md).*
-
-More in [the generator](generator/), [the data](data/) and [the research notes](research/).
-
-<details>
-<summary><b>The tablet unfolded</b>: the same six stages as the six faces of a tablet</summary>
-<br>
-<img src="images/diagrams/tablet_unfolded.png" width="600" alt="Tablet unfolding schematic: six faces A to F, consumer complaint to cuneiform ASCII">
-</details>
-
-## Quick start
-
-**Try the extension.** [Download the zip](extension/cuneiform-drift.zip?raw=1), unzip it, open `chrome://extensions`, turn on *Developer mode*, click *Load unpacked*, and choose the folder. [Full instructions](extension/).
-
-**Make an image.**
+**Try the generator** Make an image
 
 ```bash
 git clone https://github.com/dead-tom/NanniSCII.git
@@ -72,16 +61,15 @@ python3 generator/nanniscii_render.py "generator/images/Standing_male_worshiper_
 
 This draws the worshipper with the translated lines in `data/translations.csv`. Swap in your own photo; to translate new complaints, see [the generator](generator/).
 
-## Project Contents
+---
 
-```
-essay/        the essay, the artist statement, the designed PDF
-generator/    the scripts and the Colab notebook, from archive to image
-extension/    Cuneiform Drift, the browser extension
-data/         the lines used, with their translations
-research/     the process: tests, results, decisions
-images/       artworks, diagrams, process pictures
-```
+## Cuneiform Drift [the browser extension](extension/)
+
+# Quick start
+
+**Try the extension.** [Download the zip](extension/cuneiform-drift.zip?raw=1), unzip it, open `chrome://extensions`, turn on *Developer mode*, click *Load unpacked*, and choose the folder. [Full instructions](extension/).
+
+---
 
 ## Credits
 

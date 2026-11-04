@@ -8,13 +8,13 @@
 
 <img src="images/artworks/worshipper.png" width="440" alt="A standing Sumerian worshipper statue redrawn entirely in cuneiform signs">
 
-<sub>12,800 signs, 109 different ones, from 40 complaints translated into Akkadian. <a href="images/artworks/worshipper.pdf">Full-size vector PDF</a> · <a href="images/artworks/worshipper_detail.png">close-up</a></sub>
+<sub> NanniSCII Art Generator; 12,800 signs, 109 different ones, from 40 complaints translated into Akkadian. <a href="images/artworks/worshipper.pdf">Full-size vector PDF</a> · <a href="images/artworks/worshipper_detail.png">close-up</a></sub>
 
 </div>
 
 This project only skims the surface of a deeply complex, perhaps ineffable subject: the relationship between language, consciousness and machine inference, and its impact on society.
 
-Around 1750 BC, an aggrieved man called Nanni pressed a complaint into clay. The copper ingots he'd been sold were poor quality, his messenger had been insulted and sent away empty-handed, and in his exasperation and he expressed his dissatisfaction in writing. His tablet, now in the British Museum, is considered to be the oldest customer complaint in the history of human language.
+Around 1750 BC, an aggrieved man called Nanni pressed a complaint into clay. The copper ingots he'd been sold were poor quality, his messenger had been insulted and sent away empty-handed, and in his exasperation he expressed his utter dissatisfaction in writing. His tablet, now in the British Museum, is considered to be the oldest customer complaint in the history of human language.
 
 The subject tablet is used as the project anchor and root. The project has three parts:
 

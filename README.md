@@ -6,9 +6,9 @@
 
 *Tessa Edwards · Oct 2026*
 
-<img src="images/artworks/worshipper.png" width="440" alt="A standing Sumerian worshipper statue redrawn entirely in cuneiform signs">
+<img src="images/artworks/Aggrieved-man.png" width="800" alt="sample from the data set artwork">
 
-<sub> NanniSCII Art Generator; 12,800 signs, 109 different ones, from 40 complaints translated into Akkadian. <a href="images/artworks/worshipper.pdf">Full-size vector PDF</a> · <a href="images/artworks/worshipper_detail.png">close-up</a></sub>
+**[Download the project zine (PDF)](essay/The_Tablet_Talks_Back.pdf?raw=1)**
 
 </div>
 
@@ -45,9 +45,13 @@ images/       artworks, diagrams, process pictures
 ```
 ---
 
-## NanniSCII [the generator](generator/)
+# NanniSCII [the generator](generator/)
 
-# Quick start
+<img src="images/artworks/worshipper.png" width="440" alt="A standing Sumerian worshipper statue redrawn entirely in cuneiform signs">
+
+<sub> NanniSCII Art Generator; 12,800 signs, 109 different ones, from 40 complaints translated into Akkadian. <a href="images/artworks/worshipper.pdf">Full-size vector PDF</a> · <a href="images/artworks/worshipper_detail.png">close-up</a></sub>
+
+## Quick start
 
 **Try the generator** Make an image
 
@@ -63,9 +67,11 @@ This draws the worshipper with the translated lines in `data/translations.csv`. 
 
 ---
 
-## Cuneiform Drift [the browser extension](extension/)
+# Cuneiform Drift [the browser extension](extension/)
 
-# Quick start
+<img src="images/artworks/Cuneiform-drift.png" width="440" alt="sample from the data set artwork">
+
+## Quick start
 
 **Try the extension.** [Download the zip](extension/cuneiform-drift.zip?raw=1), unzip it, open `chrome://extensions`, turn on *Developer mode*, click *Load unpacked*, and choose the folder. [Full instructions](extension/).
 

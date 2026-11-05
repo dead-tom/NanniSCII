@@ -12,9 +12,11 @@
 
 </div>
 
-This project only skims the surface of a deeply complex, perhaps ineffable subject: the relationship between language, consciousness and machine inference, and its impact on society.
+<br><br>
 
-Around 1750 BC, an aggrieved man called Nanni pressed a complaint into clay. The copper ingots he'd been sold were poor quality, his messenger had been insulted and sent away empty-handed, and in his exasperation he expressed his utter dissatisfaction in writing. His tablet, now in the British Museum, is considered to be the oldest customer complaint in the history of human language.
+
+*Around 1750 BC, an aggrieved man called Nanni pressed a complaint into clay. The copper ingots he'd been sold were poor quality, his messenger had been insulted and sent away empty-handed, and in his exasperation he expressed his utter dissatisfaction in writing. His tablet, now in the British Museum, is considered to be the oldest customer complaint in the history of human language.*
+<br><br>
 
 The subject tablet is used as the project anchor and root. The project has three parts:
 
@@ -24,12 +26,16 @@ The second part of the project is an ascii art generator script that translates 
 
 The third is a digital mnemonic; a Akkadian cuneiform particle decay overlay that subtly subverts pixels on the screen into an animation.  It's an ergonomic trinket from the past gently reminding us to stay aware of passive interchange with online interaction and the living digital archive. It is also very hypnotic. 
 
+<br><br>
+
 
 | Part | |
 |---|---|
 | **i · [The Tablet Talks Back](essay/the-tablet-talks-back.md)**<br>*Essay* | How human expression becomes computational representation, and how representation can in turn become a mechanism of influence. Machines can now map the latent representations of human cognition across the whole archive we've built, a vantage point no human can reach. [Read it](essay/the-tablet-talks-back.md) · [Artist statement](essay/artist-statement.md) · [Designed PDF](essay/The_Tablet_Talks_Back.pdf) |
 | **ii · [The NanniSCII Generator](generator/)**<br>*ASCII art generator* | Translates excerpts from a modern database into an image drawn in ancient Akkadian cuneiform. The tablet as a vessel of social reflexivity: context, meaning and form transmuted into a digital artefact. [How to use it](generator/#make-an-image) |
 | **iii · [Cuneiform Drift](extension/)**<br>*Browser extension* | A digital mnemonic. A cuneiform particle overlay that now and then melts the text you're reading into a digital clay sign, then reforms. A trinket from the past, reminding us of our passive exchange with the living digital archive, whilst we navigate online. [Install it](extension/#install-about-2-minutes) |
+
+<br><br>
 
 ---
 

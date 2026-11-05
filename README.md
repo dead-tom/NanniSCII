@@ -14,25 +14,27 @@ Forty real consumer complaints were translated by a machine into Akkadian,
 the language of the oldest known customer complaint, and their cuneiform signs
 became the alphabet of an image.
 
-The complaints in data/ are real people's words, written to a regulator about
+The complaints in data/ are real people's words and emotions, written to a regulator about
 their money and their lives. Please read them with care.
 
-You are reading a complaint about yourself. Nanni would like a response.
+It's time for the archive to speak back. Nanni would like a response.
 -->
 
 <div align="center">
 
 # NanniSCII
 
-### The Tablet Talks Back · Inference and the Human Archive
+## The Tablet Talks Back · Inference and the Human Archive
 
 *Tessa Edwards · Oct 2026*
 
+<img src="images/artworks/UET_cover.png" width="800" alt="Zine cover">
+<br><br>
 <img src="images/artworks/Aggrieved-man.png" width="800" alt="sample from the data set artwork">
 
 **[Read the project zine (PDF)](essay/The_Tablet_Talks_Back.pdf)**
 
-𒀀𒈾 𒁾𒊬𒊑 𒆠𒉈𒈠 𒌝𒈠 𒈾𒀭𒉌𒈠
+#𒀀𒈾 𒁾𒊬𒊑 𒆠𒉈𒈠 𒌝𒈠 𒈾𒀭𒉌𒈠
 </div>
 
 <br><br>
@@ -98,7 +100,7 @@ This draws the worshipper with the translated lines in `data/translations.csv`. 
 
 # Cuneiform Drift [the browser extension](extension/)
 
-<img src="images/artworks/Cuneiform-drift.png" width="440" alt="sample from the data set artwork">
+<img src="images/artworks/Cuneiform-drift.png" width="440" alt="Cuneiform Drift melting a page into a cuneiform sign">
 
 ## Quick start
 
